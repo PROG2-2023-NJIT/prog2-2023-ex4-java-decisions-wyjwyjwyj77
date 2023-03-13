@@ -8,7 +8,10 @@ package prog2.exercise4.flight.booking.system;
 
 
  import java.util.Scanner;
- enum TripSource
+ import java.time.LocalDate;
+
+
+ /*enum TripSource
  { Nanjing, Beijing, Shanghai, Oulu, Helsinki, Paris }
 enum TripDestination
  { Nanjing, Beijing, Shanghai, Oulu, Helsinki, Paris }
@@ -17,7 +20,7 @@ enum SourceAirport
      ParisCharlesdeGaulleAirport}
 enum DestinationAirport
 {NanjingLukouInternationalAirport, BeijingCapitalInternationalAirport, ShanghaiPudongInternationalAirport, OuluAirport,
-    HelsinkiAirport,  ParisCharlesdeGaulleAirport }
+    HelsinkiAirport,  ParisCharlesdeGaulleAirport }*/
 
 
 
@@ -33,18 +36,35 @@ public class Main
         char[] a = passengerFullName.toCharArray();
         System.out.println("Please enter the passengerFullname:");
         System.out.println("passengerFullName");
-        System.out.println("a");
+        
+
+        System.out.println("Please enter your year of departure: ");
+        int aYear = scan.nextInt();
+        System.out.println("Please enter your month of departure: ");
+        int aMonth =scan.nextInt();
+        System.out.println("Please enter your day of departure: ");
+        int aDay =scan.nextInt();
+        System.out.println("Please enter your year of return: ");
+        int bYear =scan.nextInt();
+        System.out.println("Please enter your month of return: ");
+        int bMonth =scan.nextInt();
+        System.out.println("Please enter your day of return: ");
+        int bDay =scan.nextInt();
+        LocalDate departureDate =  LocalDate.of(aYear, aMonth, aDay);
+        LocalDate returnDate =  LocalDate.of(bYear, bMonth, bDay);
+        scan.close();
+
         System.out.println("localdate1");
         System.out.println("localDate2");
-        System.out.println("a");
+        
         System.out.println("adultpassengers");
         System.out.println("childpassengers+adultpassengers");
         System.out.println("ticketNumber=12345");
         System.out.println("Dear" + passengerFullName);
-        System.out.println("Thank you for booking your flight with FLIGHT_COMPANY.\n Following are the details of your booking and the trip:\n");
+        System.out.println("Thank you for booking your flight with flightCompany.\n Following are the details of your booking and the trip:\n");
         System.out.println("Ticket Number: ticketNumber\n");
 
-        Scanner bookingScanner = new Scanner (System.in);
+       /*  Scanner bookingScanner = new Scanner (System.in);
         System.out.println("The class you selected is:" );
         int bookingscanner =bookingScanner.nextInt();
         
@@ -134,7 +154,7 @@ public class Main
 
 
 
-
+*/
 
 
 
