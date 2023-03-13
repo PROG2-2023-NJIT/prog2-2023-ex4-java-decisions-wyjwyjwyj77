@@ -247,10 +247,10 @@ public class FlightBooking
 
 
         public void setTripDestination(String tripSource, String tripDestination) {
-            int srcChoice = Integer.parseInt(tripSource);
-            int desChoice = Integer.parseInt(tripDestination);
-            if(srcChoice != desChoice) {
-                switch(desChoice) {
+            int sC = Integer.parseInt(tripSource);
+            int dC = Integer.parseInt(tripDestination);
+            if(sC != dC) {
+                switch(dC) {
                 case 1:
                 destinationOfTrip = TripDestination.NANJING;
                 break;
@@ -322,7 +322,7 @@ public class FlightBooking
             }
 
 
-            
+            /* */
     
     
         }
