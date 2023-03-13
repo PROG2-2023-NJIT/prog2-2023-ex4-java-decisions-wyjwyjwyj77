@@ -22,25 +22,29 @@ enum DestinationAirport
 {Nanjing_Lukou_International_Airport, Beijing_Capital_International_Airport, Shanghai_Pudong_International_Airport, Oulu_Airport, Helsinki_Airport, Paris_Charles_de_Gaulle_Airport;}
 enum SourceAirport 
  { Nanjing_Lukou_International_Airport, Beijing_Capital_International_Airport, Shanghai_Pudong_International_Airport, Oulu_Airport, Helsinki_Airport, Paris_Charles_de_Gaulle_Airport;}
-
-
+ 
+ 
 public class FlightBooking
  {
+    private static final String sourceAirport = "NANJING LUKOU INTERNATIONAL AIRPORT";
+    private static final String destinationAirport = "OULU AIRPORT";
     private BookingClass bookingClass;
     private TripType typeOfTrip;
     private TripSource sourceOfTrip;
     private LocalDate departureDate;
     private LocalDate returnDate;
+   
+
+    public String getFlightID()  
+    {return getFlightID();}
     private static final String flightCompany = "Flights-of-Fancy";
     public String getFlightCompany() 
     {return flightCompany;}
-    
-
-    
-       Scanner scan = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
         String passengerFullName = scan.nextLine();
         char[] a2 = passengerFullName.toCharArray();
-    public String getRandom(int length) {
+    
+        public String getRandom(int length) {
                 StringBuffer sb = new StringBuffer();
                 Random random = new Random();
                 int isChar = 0;
@@ -99,7 +103,7 @@ public class FlightBooking
             }
 }*/
 
-    private String ticketNumber =getTicketNumber();
+   
    
 
        /*  final long TRIP_DESTINATION = ;
@@ -108,8 +112,8 @@ public class FlightBooking
 
 
 
-
-        private static final double departingTicketPrice = 400;
+        
+        private final double departingTicketPrice = 400;
         private static final double returnTicketPrice = 400;
         private double totalTicketPrice;
         private TripDestination destinationOfTrip;
@@ -156,27 +160,15 @@ public class FlightBooking
         
         
         public void setTotalPassengers(int childPassengers, int adultPassengers) 
-        {
-            this.totalPassengers = childPassengers + adultPassengers;
-        }
+        { this.totalPassengers = childPassengers + adultPassengers;}
         public LocalDate getDepartingDate() 
-        {
-            return departureDate;
-        }
+        {return departureDate;}
         public LocalDate getReturnDate() 
-        {
-            return returnDate;
-        }
-    
+        { return returnDate;}
          public TripSource getTripSource() 
-         {
-            return sourceOfTrip;
-        }
-    
-        public void setDepartureDate(LocalDate departureDate) 
-        {
-            this.departureDate = departureDate;
-        }
+         {return sourceOfTrip;}
+         public void setDepartureDate(LocalDate departureDate) 
+        {this.departureDate = departureDate;}
        
        
        
@@ -196,7 +188,7 @@ public class FlightBooking
                 break;
             }
         }
-        
+       
         public void setDepartingTicketPrice(int childPassengers, int adultPassengers) {
             double departingTicketPrice = 0.0;
             if((sourceOfTrip == TripSource.OULU &&  destinationOfTrip == TripDestination.HELSINKI) || (sourceOfTrip == TripSource.HELSINKI &&  destinationOfTrip == TripDestination.OULU) || ((sourceOfTrip == TripSource.NANJING || sourceOfTrip == TripSource.BEIJING || sourceOfTrip == TripSource.SHANGHAI) && (destinationOfTrip == TripDestination.NANJING || destinationOfTrip == TripDestination.BEIJING || destinationOfTrip == TripDestination.SHANGHAI))) {
@@ -211,6 +203,7 @@ public class FlightBooking
             } else if(bookingClass == BookingClass.ECONOMY) {
                 this.departingTicketPrice = departingTicketPrice * childPassengers + departingTicketPrice * adultPassengers + 50;
             }
+        
         }
 
 
@@ -301,8 +294,13 @@ public class FlightBooking
            }
             
         }
-
-
+        private String setTicketNumber(int i) 
+        {return null;}
+       
+       
+       private String setRandom(int i) 
+       {return null;} 
+        private String ticketNumber = setTicketNumber(4);
         public String StringOption1() {
             if(a1 == 1 || a1 == 2) {
                 return "Thank you for booking your flight with " + getFlightCompany() + ". Following are the details of your bookingand the trip:\n\n" + 
@@ -324,15 +322,11 @@ public class FlightBooking
             }
 
 
+            
+    
 
 
 
-
-
-
-
-
-
-
-
-    }
+        
+       
+ 
